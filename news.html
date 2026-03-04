@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news and updates from Royal Challengers Bengaluru">
+    <title>RCB Latest News</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===========================
+         PRELOADER
+    ============================ -->
+    <div id="preloader">
+        <div class="loader"></div>
+        <p>LOADING PLAY BOLD...</p>
+    </div>
+
+    <!-- ===========================
+         SCROLL TO TOP
+    ============================ -->
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ===========================
+         HEADER
+    ============================ -->
+    <header>
+        <a href="index.html" style="text-decoration:none;">
+            <div class="logo"><i class="fas fa-shield-halved"></i> RCB</div>
+        </a>
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="navbar">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="team.html"><i class="fas fa-users"></i> Team</a>
+            <a href="schedule.html"><i class="fas fa-calendar-days"></i> Schedule</a>
+            <a href="stats.html"><i class="fas fa-chart-simple"></i> Stats</a>
+            <a class="active" href="news.html"><i class="fas fa-newspaper"></i> News</a>
+            <a href="fan-zone.html"><i class="fas fa-ticket"></i> Fan Zone</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
+
+    <!-- ===========================
+         PAGE HERO
+    ============================ -->
+    <section class="page-title reveal"
+        style="margin-top:70px; text-align:center; padding: 60px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('assets/images/fan-bg-placeholder.jpg') center/cover;">
+        <h1
+            style="font-size: 3rem; color: var(--rcb-gold); font-family: var(--font-head); text-shadow: 0 0 20px var(--rcb-gold-glow);">
+            Latest Headlines</h1>
+        <p style="font-size: 1.2rem; color: var(--text-muted);">Direct from the locker room and the management desk.</p>
+    </section>
+
+    <!-- ===========================
+         NEWS SECTION (Reusing Homepage grid)
+    ============================ -->
+    <section class="latest-news reveal">
+        <div class="news-grid">
+
+            <div class="news-card">
+                <div class="news-date"><i class="fas fa-clock"></i> 2 Hours Ago</div>
+                <h3>New RCB Premium Jersey Launched</h3>
+                <p>A bold design inspired by Bengaluru pride, featuring deep crimson and rich gold accents designed for
+                    peak performance.</p>
+                <a href="#" class="read-more">Full Story <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date"><i class="fas fa-clock"></i> 1 Day Ago</div>
+                <h3>RCB Signs Explosive Young Talent</h3>
+                <p>Franchise bolsters their middle-order fire power. The management believes the new signing will be a
+                    massive X-factor.</p>
+                <a href="#" class="read-more">Full Story <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date"><i class="fas fa-clock"></i> 3 Days Ago</div>
+                <h3>Intense Training Camp Underway</h3>
+                <p>The squad hits the nets as the management targets early momentum. Kohli seen spending extra hours
+                    practicing spin shots.</p>
+                <a href="#" class="read-more">Full Story <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date"><i class="fas fa-calendar-alt"></i> March 01, 2026</div>
+                <h3>Siraj Unveils New Bowling Variation</h3>
+                <p>The speedster was seen practicing a deadly slower bouncer which he claims will be his secret weapon
+                    this season.</p>
+                <a href="#" class="read-more">Full Story <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date"><i class="fas fa-calendar-alt"></i> Feb 27, 2026</div>
+                <h3>Fan Zone Launch Breaking Records</h3>
+                <p>Over 1 million fans signed up to the new digital Fan Zone in the first 24 hours, crashing servers
+                    globally.</p>
+                <a href="#" class="read-more">Full Story <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+            <div class="news-card">
+                <div class="news-date"><i class="fas fa-calendar-alt"></i> Feb 22, 2026</div>
+                <h3>Chinnaswamy Stadium Upgrade Complete</h3>
+                <p>The fortress is ready. New premium seating and massive HD screens installed to give fans the ultimate
+                    viewing experience.</p>
+                <a href="#" class="read-more">Full Story <i class="fas fa-chevron-right"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===========================
+         FOOTER
+    ============================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo"><i class="fas fa-shield-halved"></i> RCB</div>
+                <p>The official premium fan destination for the Royal Challengers Bengaluru. Stay bold, play bold.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="team.html"><i class="fas fa-angle-right"></i> the Squad</a></li>
+                    <li><a href="schedule.html"><i class="fas fa-angle-right"></i> Fixtures</a></li>
+                    <li><a href="stats.html"><i class="fas fa-angle-right"></i> Statistics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Ticketing Help</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 <span>Royal Challengers Bengaluru</span> • Built by the 12th Man Army.</p>
+        </div>
+    </footer>
+
+    <!-- Link to Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

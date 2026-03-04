@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the Royal Challengers Bengaluru Team">
+    <title>Contact RCB</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-container h2 {
+            font-family: var(--font-head);
+            color: var(--rcb-gold);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .form-group i {
+            position: absolute;
+            left: 15px;
+            top: 16px;
+            color: var(--rcb-gold);
+            font-size: 1.2rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px 15px 15px 50px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: var(--rcb-red);
+            box-shadow: 0 0 10px var(--rcb-red-glow);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        textarea {
+            padding-top: 20px;
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .form-group textarea+i {
+            top: 22px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--rcb-red), #850606);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-family: var(--font-head);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px var(--rcb-red-glow);
+        }
+
+        button[type="submit"]:hover {
+            background: linear-gradient(135deg, var(--rcb-gold), #8a7138);
+            box-shadow: 0 8px 25px var(--rcb-gold-glow);
+            transform: translateY(-3px);
+            color: var(--bg-dark);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .info-item {
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .info-item i {
+            font-size: 2rem;
+            color: var(--rcb-red);
+            margin-bottom: 10px;
+            display: block;
+            text-shadow: 0 0 10px var(--rcb-red-glow);
+        }
+
+        .info-item h4 {
+            color: white;
+            margin-bottom: 5px;
+            font-family: var(--font-head);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===========================
+         PRELOADER
+    ============================ -->
+    <div id="preloader">
+        <div class="loader"></div>
+        <p>LOADING PLAY BOLD...</p>
+    </div>
+
+    <!-- ===========================
+         SCROLL TO TOP
+    ============================ -->
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ===========================
+         HEADER
+    ============================ -->
+    <header>
+        <a href="index.html" style="text-decoration:none;">
+            <div class="logo"><i class="fas fa-shield-halved"></i> RCB</div>
+        </a>
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="navbar">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="team.html"><i class="fas fa-users"></i> Team</a>
+            <a href="schedule.html"><i class="fas fa-calendar-days"></i> Schedule</a>
+            <a href="stats.html"><i class="fas fa-chart-simple"></i> Stats</a>
+            <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+            <a href="fan-zone.html"><i class="fas fa-ticket"></i> Fan Zone</a>
+            <a class="active" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
+
+    <!-- ===========================
+         PAGE HERO
+    ============================ -->
+    <section class="page-title reveal"
+        style="margin-top:70px; text-align:center; padding: 60px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('assets/images/fan-bg-placeholder.jpg') center/cover;">
+        <h1
+            style="font-size: 3rem; color: var(--rcb-gold); font-family: var(--font-head); text-shadow: 0 0 20px var(--rcb-gold-glow);">
+            Get In Touch</h1>
+        <p style="font-size: 1.2rem; color: var(--text-muted);">Have questions? The management is here to listen.</p>
+    </section>
+
+    <!-- ===========================
+         CONTACT FORM
+    ============================ -->
+    <section class="reveal">
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Headquarters</h4>
+                    <p>M. Chinnaswamy Stadium<br>Bengaluru, India</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Us</h4>
+                    <p>contact@rcb.com<br>support@rcb.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Call Us</h4>
+                    <p>+91 800 123 4567<br>Mon-Fri, 9am-6pm</p>
+                </div>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <i class="fas fa-at"></i>
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <i class="fas fa-comment-alt"></i>
+                    <textarea name="message" placeholder="How can we help you?" required></textarea>
+                </div>
+
+                <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===========================
+         FOOTER
+    ============================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo"><i class="fas fa-shield-halved"></i> RCB</div>
+                <p>The official premium fan destination for the Royal Challengers Bengaluru. Stay bold, play bold.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="team.html"><i class="fas fa-angle-right"></i> the Squad</a></li>
+                    <li><a href="schedule.html"><i class="fas fa-angle-right"></i> Fixtures</a></li>
+                    <li><a href="stats.html"><i class="fas fa-angle-right"></i> Statistics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Ticketing Help</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 <span>Royal Challengers Bengaluru</span> • Built by the 12th Man Army.</p>
+        </div>
+    </footer>
+
+    <!-- Link to Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

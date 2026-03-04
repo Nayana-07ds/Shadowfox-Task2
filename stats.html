@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RCB Stats - Team Performance & Records">
+    <title>RCB Stats - Team Performance</title>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--rcb-red);
+            transition: all 0.4s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .stat-item:hover::before {
+            background: var(--rcb-gold);
+            width: 100%;
+            opacity: 0.1;
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            color: var(--rcb-gold);
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(198, 167, 95, 0.4);
+        }
+
+        .stat-value {
+            font-family: var(--font-head);
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--rcb-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .stat-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===========================
+         PRELOADER
+    ============================ -->
+    <div id="preloader">
+        <div class="loader"></div>
+        <p>LOADING PLAY BOLD...</p>
+    </div>
+
+    <!-- ===========================
+         SCROLL TO TOP
+    ============================ -->
+    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ===========================
+         HEADER
+    ============================ -->
+    <header>
+        <a href="index.html" style="text-decoration:none;">
+            <div class="logo"><i class="fas fa-shield-halved"></i> RCB</div>
+        </a>
+        <div class="menu-toggle" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="navbar">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="team.html"><i class="fas fa-users"></i> Team</a>
+            <a href="schedule.html"><i class="fas fa-calendar-days"></i> Schedule</a>
+            <a class="active" href="stats.html"><i class="fas fa-chart-simple"></i> Stats</a>
+            <a href="news.html"><i class="fas fa-newspaper"></i> News</a>
+            <a href="fan-zone.html"><i class="fas fa-ticket"></i> Fan Zone</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
+
+    <!-- ===========================
+         PAGE HERO
+    ============================ -->
+    <section class="page-title reveal"
+        style="margin-top:70px; text-align:center; padding: 60px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('assets/images/fan-bg-placeholder.jpg') center/cover;">
+        <h1
+            style="font-size: 3rem; color: var(--rcb-gold); font-family: var(--font-head); text-shadow: 0 0 20px var(--rcb-gold-glow);">
+            Team Statistics</h1>
+        <p style="font-size: 1.2rem; color: var(--text-muted);">The numbers behind the passion and the play.</p>
+    </section>
+
+    <!-- ===========================
+         STATS GRID
+    ============================ -->
+    <section class="reveal">
+        <h2 class="section-title">Hall of Records</h2>
+
+        <div class="stat-grid">
+            <div class="stat-item">
+                <i class="fas fa-medal stat-icon"></i>
+                <div class="stat-label">Highest Run Scorer</div>
+                <div class="stat-value">7,264</div>
+                <div class="stat-desc">Virat Kohli dominates the global charts with an unwavering presence.</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-bullseye stat-icon"></i>
+                <div class="stat-label">Highest Wicket Taker</div>
+                <div class="stat-value">139</div>
+                <div class="stat-desc">Yuzvendra Chahal's legendary spin legacy remains unbroken.</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-chart-line stat-icon"></i>
+                <div class="stat-label">Best Win Percentage</div>
+                <div class="stat-value">52.4%</div>
+                <div class="stat-desc">The 2011 season saw the team operate at peak dominance.</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-bolt stat-icon"></i>
+                <div class="stat-label">Highest Team Total</div>
+                <div class="stat-value">263/5</div>
+                <div class="stat-desc">Unleashed against PWI in 2013, still arguably the greatest T20 innings ever.
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-star stat-icon"></i>
+                <div class="stat-label">Most Centuries</div>
+                <div class="stat-value">7</div>
+                <div class="stat-desc">Virat Kohli sets the absolute gold standard for finding the boundary.</div>
+            </div>
+
+            <div class="stat-item">
+                <i class="fas fa-users-viewfinder stat-icon"></i>
+                <div class="stat-label">Highest Partnership</div>
+                <div class="stat-value">229</div>
+                <div class="stat-desc">Kohli & De Villiers against GL in 2016 - pure batting poetry.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         FOOTER
+    ============================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo"><i class="fas fa-shield-halved"></i> RCB</div>
+                <p>The official premium fan destination for the Royal Challengers Bengaluru. Stay bold, play bold.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="team.html"><i class="fas fa-angle-right"></i> the Squad</a></li>
+                    <li><a href="schedule.html"><i class="fas fa-angle-right"></i> Fixtures</a></li>
+                    <li><a href="stats.html"><i class="fas fa-angle-right"></i> Statistics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> FAQ</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Ticketing Help</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 <span>Royal Challengers Bengaluru</span> • Built by the 12th Man Army.</p>
+        </div>
+    </footer>
+
+    <!-- Link to Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
